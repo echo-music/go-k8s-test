@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo-service
+  namespace: default
+
+spec:
+  ports:
+    - protocol: TCP
+      port: 8090
+      targetPort: 8090
+  selector:
+    app: demo
+  type: ClusterIP
