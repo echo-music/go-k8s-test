@@ -7,7 +7,7 @@ import (
 )
 
 func say(w http.ResponseWriter, r *http.Request) {
-	_, err := fmt.Fprintln(w, "hello..."+r.RemoteAddr)
+	_, err := fmt.Fprintln(w, "hello..."+r.RemoteAddr+"到访")
 	if err != nil {
 		return
 	}
