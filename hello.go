@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func say(w http.ResponseWriter, r *http.Request) {
-	_, err := fmt.Fprintln(w, "hello..."+r.RemoteAddr+"到访")
+	hostname, _ := os.Hostname()
+	_, err := fmt.Fprintln(w, hostname+" 热烈欢迎 "+r.RemoteAddr+" 到访")
 	if err != nil {
 		return
 	}

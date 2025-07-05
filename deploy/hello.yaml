@@ -19,4 +19,4 @@ spec:
           image: echomusic/hello:v2.0
           ports:
             - containerPort: 8090
-#              protocol: TCP
+              protocol: TCP
