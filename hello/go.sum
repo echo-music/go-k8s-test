@@ -1,3 +1,5 @@
+github.com/echo-music/go-k8s-test/order v0.0.0-20250705125918-6e77665d9356 h1:qj1ogSHIs/vMgwTys5+Rpo7nyF2yP3j8aeF/q+7wKf4=
+github.com/echo-music/go-k8s-test/order v0.0.0-20250705125918-6e77665d9356/go.mod h1:bgmUmZotP6rf5ERRdVd+tADhtRsWCDbooF3SjHwKCSw=
 github.com/go-logr/logr v1.4.2 h1:6pFjapn8bFcIbiKo3XT4j/BhANplGihG6tvd+8rYgrY=
 github.com/go-logr/logr v1.4.2/go.mod h1:9T104GzyrTigFIr8wt5mBrctHMim0Nb2HLGrmQ40KvY=
 github.com/go-logr/stdr v1.2.2 h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=

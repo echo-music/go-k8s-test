@@ -1,9 +1,11 @@
 FROM golang:alpine AS builder
 
 WORKDIR /build
-COPY hello.go .
+COPY ../hello .
+#COPY ../go.mod .
 
-RUN go build -o hello hello.go
+
+RUN go build -o hello hello/hello.go
 
 
 FROM alpine
