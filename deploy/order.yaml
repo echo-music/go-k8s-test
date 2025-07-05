@@ -13,7 +13,6 @@ spec:
       labels:
         app: order
     spec:
-      #      hostNetwork: true
       containers:
         - name: order
           image: echomusic/order:v2.0
