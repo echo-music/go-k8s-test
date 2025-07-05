@@ -13,4 +13,4 @@ COPY --from=builder /build/order .
 
 EXPOSE 8090
 
-CMD ["./hello"]
+CMD ["./order"]

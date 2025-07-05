@@ -12,11 +12,11 @@ import (
 )
 
 const (
-	address     = "localhost:50051"
+	address     = "order-service:50051"
 	defaultName = "world"
 )
 
-func main() {
+func createOrder() {
 	conn, err := grpc.NewClient(address, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)

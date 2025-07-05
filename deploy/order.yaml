@@ -29,8 +29,9 @@ spec:
   selector:
     app: order
   ports:
-    - protocol: TCP
-      port: 50051        # 前台接待
-      targetPort: 50051  # 服务提供者(按摩，推拿)
-      nodePort: 30001   # 如果 type 是 NodePort，需要指定 nodePort
-  type: NodePort  # 或者 LoadBalancer
+    - name: order
+      port: 50051          # 服务端口
+      targetPort: 50051    # 容器端口
+      protocol: TCP
+  type: ClusterIP       # 内部集群访问
+
