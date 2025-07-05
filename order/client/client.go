@@ -16,7 +16,7 @@ const (
 	defaultName = "world"
 )
 
-func createOrder() {
+func CreateOrder() string {
 	conn, err := grpc.NewClient(address, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
@@ -37,4 +37,5 @@ func createOrder() {
 		log.Fatalf("could not greet: %v", err)
 	}
 	log.Printf("Greeting: %s", r.GetMessage())
+	return r.GetMessage()
 }
