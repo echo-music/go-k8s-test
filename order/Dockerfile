@@ -1,9 +1,9 @@
 FROM golang:alpine AS builder
 
 WORKDIR /build
-COPY server/main.go .
-
-RUN go build -o order main.go
+COPY . .
+RUN go mod download \
+&& go build -o order server/main.go
 
 
 FROM alpine
