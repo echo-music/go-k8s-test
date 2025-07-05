@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"net"
+	"os"
 
 	pb "github.com/echo-music/go-k8s-test/order/proto" // 替换为你的模块路径
 	"google.golang.org/grpc"
@@ -19,7 +20,8 @@ type server struct {
 
 func (s *server) CreateOrder(ctx context.Context, in *pb.CreateOrderRequest) (*pb.CreateOrderReply, error) {
 	log.Printf("Received: %v", in.GetName())
-	return &pb.CreateOrderReply{Message: "Hello " + in.GetName()}, nil
+	hostName, _ := os.Hostname()
+	return &pb.CreateOrderReply{Message: "Hello " + in.GetName() + ",host:" + hostName}, nil
 }
 
 func main() {
