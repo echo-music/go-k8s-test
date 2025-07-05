@@ -1,4 +1,4 @@
-package client
+package main
 
 import (
 	"context"
@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	address     = "order-service:50051"
+	address     = ":50051"
 	defaultName = "world"
 )
 

@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"github.com/echo-music/go-k8s-test/order/client"
 
+	//"github.com/echo-music/go-k8s-test/order/client"
+
 	"log"
 	"net/http"
 	"os"

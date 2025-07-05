@@ -17,7 +17,7 @@ type server struct {
 	pb.UnimplementedOrderServiceServer
 }
 
-func (s *server) SayHello(ctx context.Context, in *pb.CreateOrderRequest) (*pb.CreateOrderReply, error) {
+func (s *server) CreateOrder(ctx context.Context, in *pb.CreateOrderRequest) (*pb.CreateOrderReply, error) {
 	log.Printf("Received: %v", in.GetName())
 	return &pb.CreateOrderReply{Message: "Hello " + in.GetName()}, nil
 }
