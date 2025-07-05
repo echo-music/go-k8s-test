@@ -5,7 +5,7 @@ down:
 clear:down
 	docker image prune && docker rmi echomusic/hello:v2.0
 image:
-	docker rmi echomusic/hello:v2.0 && docker  build . -t  echomusic/hello:v2.0 -f ../image/Dockerfile_hello
+	docker rmi echomusic/hello:v2.0 && docker  build . -t  echomusic/hello:v2.0
 
 
 
