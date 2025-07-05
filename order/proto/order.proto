@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./order/proto;order";
+
+package hello;
+
+service OrderService {
+  rpc CreateOrder (CreateOrderRequest) returns (CreateOrderReply) {}
+}
+
+message CreateOrderRequest {
+  string name = 1;
+}
+
+message CreateOrderReply {
+  string message = 1;
+}

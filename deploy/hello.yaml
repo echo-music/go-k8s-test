@@ -15,8 +15,8 @@ spec:
     spec:
 #      hostNetwork: true
       containers:
-        - name: hello
-          image: echomusic/hello:v2.0
+        - name: order
+          image: echomusic/order:v2.0
           ports:
             - containerPort: 8090
               protocol: TCP
