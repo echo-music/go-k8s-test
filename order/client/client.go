@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	address     = "127.0.0.1:50051"
+	address     = ":50051"
 	defaultName = "world"
 )
 
@@ -36,6 +36,6 @@ func CreateOrder() string {
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	log.Printf("Greeting: %s", r.GetMessage())
+	log.Printf("你大爷的 Greeting: %s", r.GetMessage())
 	return r.GetMessage()
 }
