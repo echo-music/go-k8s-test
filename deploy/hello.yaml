@@ -1,21 +1,21 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: demo-deploy
+  name: hello-deploy
   namespace: default
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: hello
   template:
     metadata:
       labels:
-        app: demo
+        app: hello
     spec:
 #      hostNetwork: true
       containers:
-        - name: order
+        - name: hello
           image: echomusic/hello:v2.0
           ports:
             - containerPort: 8090
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-service
+  name: hello-service
 spec:
   selector:
-    app: demo
+    app: hello
   ports:
     - protocol: TCP
       port: 8090        # 前台接待

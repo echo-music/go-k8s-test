@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	address     = ":50051"
+	address     = "127.0.0.1:50051"
 	defaultName = "world"
 )
 

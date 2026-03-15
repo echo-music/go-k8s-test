@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/echo-music/go-k8s-test/order/client"
-
 	//"github.com/echo-music/go-k8s-test/order/client"
 
 	"log"
@@ -13,8 +11,9 @@ import (
 
 func say(w http.ResponseWriter, r *http.Request) {
 	hostname, _ := os.Hostname()
-	res := client.CreateOrder()
-	_, err := fmt.Fprintln(w, hostname+" 热烈欢迎 "+r.RemoteAddr+" 到访. grpc result"+res)
+
+	//res := client.CreateOrder()
+	_, err := fmt.Fprintln(w, hostname+" 热烈欢迎 "+r.RemoteAddr+" 到访. grpc result")
 	if err != nil {
 		return
 	}
